@@ -36,11 +36,10 @@ The file called functions.py stores the main operations that a user can perform 
 # -- FILE: functions/functions.py
 # Example
 
-    def textualSearch(self, text):    
-        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).click()
-        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).send_keys(text)
-        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).send_keys(Keys.ENTER)
-        time.sleep(60) 
+def textualSearch(self, text):    
+    WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).click()
+    WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).send_keys(text)
+    WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).send_keys(Keys.ENTER) 
 ```
 
 The file named steps.py connects the steps of the feature file -semanticsearch.feature- with the Selenium functions -functions.py-.
