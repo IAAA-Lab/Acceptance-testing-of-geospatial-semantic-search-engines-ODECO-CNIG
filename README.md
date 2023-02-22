@@ -28,7 +28,9 @@ features/steps/
 features/steps/steps.py
 ```
 
-The file called functions.py stores the main operations that a user can perform while browsing the browser written in Selenium Python
+![Test directory](./cognitive_walkthroughs_test_directory.png)
+
+The file called functions.py stores the main operations that a user can perform while browsing the browser written in Selenium Python.
 
 ```python
 # -- FILE: functions/functions.py
@@ -53,7 +55,7 @@ def step_impl(self, text):
 
 The file called "semanticsearch.feature" stores  scenarios written in Gherkin.
 
-```
+```gherkin
 # -- FILE: features/semanticsearch.feature
 Feature: View resource
 Scenario: Discover cartographic resources of the autonomous community of "Asturias"
