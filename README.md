@@ -30,7 +30,7 @@ features/steps/steps.py
 
 ![Test directory](./cognitive_walkthroughs_test_directory.png)
 
-The file called functions.py stores the main operations that a user can perform while browsing the browser written in Selenium Python.
+The file called **functions.py** stores the main operations that a user can perform while browsing the browser written in Selenium Python.
 
 ```python
 # -- FILE: functions/functions.py
@@ -42,7 +42,7 @@ def textualSearch(self, text):
     WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "autocomplete"))).send_keys(Keys.ENTER) 
 ```
 
-The file named steps.py connects the steps of the feature file -semanticsearch.feature- with the Selenium functions -functions.py-.
+The file named **steps.py** connects the steps of the feature file **semanticsearch.feature** with the Selenium functions **functions.py**.
 
 ```python
 # -- FILE: features/steps/steps.py
@@ -52,7 +52,7 @@ def step_impl(self, text):
     myFunctions.textualSearch(self, text)
 ```
 
-The file called "semanticsearch.feature" stores  scenarios written in Gherkin.
+The file called **semanticsearch.feature** stores  scenarios written in Gherkin.
 
 ```gherkin
 # -- FILE: features/semanticsearch.feature
@@ -65,7 +65,7 @@ When the user selects one of the available resources
 Then a full metadata record describing the resource is displayed in a new tab
 ```
 
-Run the Feature Test
+Run the Test
 
 ```
 $ behave ../features/semanticsearch.feature
