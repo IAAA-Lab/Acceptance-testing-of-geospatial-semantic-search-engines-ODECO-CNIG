@@ -20,12 +20,12 @@ This repository contains some python scripts for performing automatic acceptance
 The test directory has the following structure:
 
 ```
-functions/
-functions/functions.py
 features/
 features/semanticsearch.feature
 features/steps/
 features/steps/steps.py
+functions/
+functions/functions.py
 ```
 
 ![Test directory](./cognitive_walkthroughs_test_directory.png)
