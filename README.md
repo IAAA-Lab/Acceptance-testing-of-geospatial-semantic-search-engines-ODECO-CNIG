@@ -4,24 +4,20 @@ This repository contains some python scripts for performing automatic acceptance
 
 
 # Table of Contents
-1. [Scripts for performing branch testing](#example)
-2. [Scripts for performing scenario testing](#example2)
-3. [Scripts for performing cognitive walkthroughs](#third-example)
-4. [Notebook for the analysis of System Usability Scale (SUS) scores](#fourth-examplehttpwwwfourthexamplecom)
-5. [Notebook for the analysis of relevance evaluation by raters (prec@10)](#fourth-examplehttpwwwfourthexamplecom)
+1. [Scripts for performing automated tests](#example)
+2. [Notebook for the analysis of System Usability Scale (SUS) scores](#fourth-examplehttpwwwfourthexamplecom)
+3. [Notebook for the analysis of relevance evaluation by raters (prec@10)](#fourth-examplehttpwwwfourthexamplecom)
 
 
-## Scripts for performing branch testing
-
-## Scripts for performing scenario testing
-
-## Scripts for performing cognitive walkthroughs
+## Scripts for performing automated tests
 
 The test directory has the following structure:
 
 ```
 features/
-features/semanticsearch.feature
+features/branch_testing.feature
+features/scenario_testing.feature
+features/cognitive_walkthrough.feature
 features/steps/
 features/steps/steps.py
 functions/
