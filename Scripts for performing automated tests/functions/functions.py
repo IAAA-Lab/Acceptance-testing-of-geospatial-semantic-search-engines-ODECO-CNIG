@@ -158,3 +158,18 @@ class myFunctions():
     def download_catalogue(self): 
         WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='link-ico-count  download']"))).click()
         time.sleep(60)
+    
+    def download_resource(self):
+        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='link-ico download']"))).click()
+        time.sleep(60)  
+        
+    def buy_resource(self): 
+        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='comprabtn']"))).click()
+        time.sleep(60)
+        
+    def free_class(self,free_class): 
+        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='"+free_class+"+']"))).click()
+    
+    def locate(self): 
+        WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='icono link-ico marker']"))).click()
+        time.sleep(60)
