@@ -22,7 +22,7 @@ def step_impl(self):
 def step_impl(self):
     myFunctions.checkmetadatarecord(self)
 
-@then('search results are displayed)
+@then('search results are displayed')
 def step_impl(self):
     myFunctions.display(self)
     
