@@ -26,10 +26,10 @@ functions/functions.py
 
 ![Test directory](./cognitive_walkthroughs_test_directory.png)
 
-The file called **semanticsearch.feature** stores  scenarios written in Gherkin.
+The **.feature** files contain scenarios written in Gherkin for the three types of automatic tests that were executed on the semantic search engine: branch testing, scenario testing, and cognitive walkthrough.
 
 ```gherkin
-# -- FILE: features/semanticsearch.feature
+# -- FILE: features/cognitive_walkthrough.feature
 Feature: View resource
 Scenario: Discover cartographic resources of the autonomous community of "Asturias"
     Given the user is on the home page of the search engine
@@ -39,7 +39,7 @@ Scenario: Discover cartographic resources of the autonomous community of "Asturi
     Then a full metadata record describing the resource is displayed in a new tab
 ```
 
-The file named **steps.py** connects the steps of the feature file **semanticsearch.feature** with the Selenium functions **functions.py**.
+The file named **steps.py** connects the steps of the feature file **cognitive_walkthrough.feature** with the Selenium functions **functions.py**.
 
 ```python
 # -- FILE: features/steps/steps.py
