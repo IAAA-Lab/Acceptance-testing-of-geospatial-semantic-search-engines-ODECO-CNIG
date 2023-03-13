@@ -38,7 +38,7 @@ def step_impl(self):
 def step_impl(self):
     myFunctions.buy_catalogue(self)
     
-@when('the user locates a resource available in the main catalogue section')
+@when('the user a resource available in the main catalogue section')
 def step_impl(self):
     myFunctions.locate_catalogue(self)
 
@@ -89,3 +89,35 @@ def step_impl(self, coord1, coord2):
 @when('the user enters the cadastral reference "{cadastralReference}"')
 def step_impl(self, cadastralReference):
     myFunctions.cadastralSearch(self, cadastralReference)
+    
+@when('the user downloads one of the files available in the metadata sheet')
+def step_impl(self):
+    myFunctions.download_resource(self)
+    
+@then('the file is downloaded locally')
+def step_impl(self):
+    myFunctions.check_download(self)
+    
+@when('the user buys one of the available resources in the metadata sheet')
+def step_impl(self):
+    myFunctions.buy_resource(self)
+    
+@then('the selected product is added to the shopping cart')
+def step_impl(self):
+    myFunctions.check_cart(self)
+    
+@when('the user selects the filter of "{category}"')
+def step_impl(self, category):
+    myFunctions.free_class(self, category)
+    
+@then('only the resources related to "General Cartography" are displayed')
+def step_impl(self):
+    myFunctions.results(self)
+    
+@when('the user locates one of the available resources')
+def step_impl(self):
+    myFunctions.locate(self)
+    
+@then('the location of the resource is shown in the side map')
+def step_impl(self):
+    myFunctions.check_geometry_displayed(self) 
