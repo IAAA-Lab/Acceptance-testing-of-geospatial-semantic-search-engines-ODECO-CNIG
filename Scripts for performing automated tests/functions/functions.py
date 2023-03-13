@@ -173,3 +173,15 @@ class myFunctions():
     def locate(self): 
         WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='icono link-ico marker']"))).click()
         time.sleep(60)
+        
+    def check_download(self): 
+        element=WebDriverWait(self.driver,60).until(EC.element_to_be_clickable((By.CLASS_NAME, "numDescargas")))
+        assert int(filter(str.isdigit, element.text)) > 0, element.text+" Not downloads found"
+        
+    def check_cart(self): 
+        element=WebDriverWait(self.driver,60).until(EC.element_to_be_clickable((By.CLASS_NAME, "numCarrito")))
+        assert int(filter(str.isdigit, element.text)) > 0, element.text+" Not products found"
+        
+    def check_geometry_displayed(self): 
+        element=WebDriverWait(self.driver,60).until(EC.element_to_be_clickable((By.CLASS_NAME, "numGeometrias")))
+        assert int(filter(str.isdigit, element.text)) > 0, element.text+" Not geometries found"
