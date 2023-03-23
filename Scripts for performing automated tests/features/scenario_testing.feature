@@ -1,4 +1,4 @@
-Feature: scenario testing
+Feature: 01. Search results
 
 Scenario: the user is able to search for resources typing text 
     Given The user is on the home page of the search engine
@@ -30,10 +30,14 @@ Scenario: the user is able search for resources typing a cadastral reference
     When the user enters the cadastral reference "9977715VK3797F"
     Then search results are displayed
 
+Feature: 02. Display results
+
 Scenario: the user is able to view a list of resources after performing a search
     Given The user is on the home page of the search engine
     When the user performs a textual search for "Madrid"
     Then search results are displayed   
+
+Feature: 03. Filter results
 
 Scenario: the user is able to filter the list of results with the filters provided
     Given The user is on the home page of the search engine
@@ -42,12 +46,16 @@ Scenario: the user is able to filter the list of results with the filters provid
     When the user selects the filter of "General Cartography"       
     Then only the resources related to "General Cartography" are displayed
 
+Feature: 04. View metadata
+
 Scenario: the user is able to view the metadata record of a specific resource from the results list
     Given The user is on the home page of the search engine
     When the user performs a textual search for "Madrid"
     Then search results are displayed
     When the user selects the filter of "General Cartography"       
     Then only the resources related to "General Cartography" are displayed
+
+Feature: 05. Locate resource
 
 Scenario: the user is able to locate on the map a specific resource from the result list
     Given The user is on the home page of the search engine
@@ -56,12 +64,16 @@ Scenario: the user is able to locate on the map a specific resource from the res
     When the user locates one of the available resources
     Then the location of the resource is shown in the side map
 
+Feature: 06. Download resource
+
 Scenario: the user is able to download a specific resource from the result list
     Given The user is on the home page of the search engine
     When the user performs a textual search for "Madrid"
     Then search results are displayed
     When the user downloads one of the files available
     Then the file is downloaded locally
+
+Feature: 07. Buy resource
 
 Scenario: the user is able to buy a specific resource from the result list on the map
     Given The user is on the home page of the search engine
